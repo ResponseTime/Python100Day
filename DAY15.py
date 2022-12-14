@@ -10,3 +10,11 @@ elif a >= "17:00:00" and a <= "21:00:00":
     print("Good evening!")
 elif a > "21:00:00" and a <= "23:59:59":
     print("Good night!")
+
+
+def calculate_age(birth_year):
+    age = datetime.now().year - birth_year
+    return age
+
+
+print(calculate_age(2003))
