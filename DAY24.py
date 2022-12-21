@@ -1,0 +1,10 @@
+tup = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+stt = ('hello', 'world', 'my', 'name', 'is', 'python')
+tpp = ('hello', 'world', 32.5, 65, True)
+TP = (1,)
+new_tup = tup[3:5]
+print(new_tup)
+print(type(TP), TP)
+print(tup)
+print(tpp)
+print(stt)
