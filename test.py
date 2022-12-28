@@ -77,27 +77,42 @@
 # root.mainloop()
 
 
+import time
 import requests
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 
 
-def scrape(url):
-    # Make a GET request to the website
-    response = requests.get(url)
+# def scrape(url):
+#     # Make a GET request to the website
+#     response = requests.get(url)
 
-    # Parse the HTML content
-    soup = BeautifulSoup(response.text, 'html.parser')
+#     # Parse the HTML content
+#     soup = BeautifulSoup(response.text, 'html.parser')
 
-    # Extract the information you want to scrape
-    title = soup.find('h1').text
-    paragraphs = [p.text for p in soup.find_all('span')]
-    ps = [p.text for p in soup.find_all('p')]
+#     # Extract the information you want to scrape
+#     # title = soup.find('h1').text
+#     paragraphs = [p.text for p in soup.find_all('a')]
+#     ps = [p.text for p in soup.find_all('p')]
 
-    # Print the information
-    print(title)
-    print('\n'.join(paragraphs))
-    print('\n'.join(ps))
+#     # Print the information
+#     # print(title)
+#     print('\n'.join(paragraphs))
+#     print('\n'.join(ps))
 
 
-# Test the scraper
-scrape('https://www.bbc.com/news/world')
+# # Test the scraper
+# scrape('https://www.nytimes.com/section/world')
+# Import webdriver from selenium library
+from selenium import webdriver
+# Importing keys in the program from webdriver
+from selenium.webdriver.common.keys import Keys
+# Providing the path of chrome Web driver
+driver = webdriver.Chrome(
+    '"C:/Users/callr/Downloads/chromedriver_win32/chromedriver.exe"')
+# Opening url by get() method
+i = 0
+while i < 5000:
+    driver.get(
+        "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
+    time.sleep(1)
+    i += 1
