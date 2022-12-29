@@ -129,5 +129,5 @@ while i < 5000:
     time.sleep(2)
     driver.get(
         "https://neokingyt.blogspot.com/2022/12/10-steps-to-be-best-version-of-yourself.html")
-    time.sleep(2)
+    time.sleep(12)
     i += 1
