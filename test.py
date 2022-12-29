@@ -112,7 +112,22 @@ driver = webdriver.Chrome(
 # Opening url by get() method
 i = 0
 while i < 5000:
+    # driver.get(
+    #     "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
+    # time.sleep(2)
+    # driver.get(
+    #     "https://neokingyt.blogspot.com/2022/12/recession-and-its-happening-in.html")
+    # time.sleep(2)
+    # driver.get(
+    #     "https://neokingyt.blogspot.com/2022/12/inflation-and-its-effects-on-world.html")
+    # time.sleep(2)
+    # driver.get(
+    #     "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
+    # time.sleep(2)
     driver.get(
-        "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
-    time.sleep(1)
+        "https://neokingyt.blogspot.com/2022/12/video-games-and-how-it-simulates-your.html")
+    time.sleep(2)
+    driver.get(
+        "https://neokingyt.blogspot.com/2022/12/10-steps-to-be-best-version-of-yourself.html")
+    time.sleep(2)
     i += 1
