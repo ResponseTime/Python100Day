@@ -77,6 +77,8 @@
 # root.mainloop()
 
 
+from selenium.webdriver.common.keys import Keys
+from selenium import webdriver
 import time
 import requests
 # from bs4 import BeautifulSoup
@@ -102,32 +104,43 @@ import requests
 
 # # Test the scraper
 # scrape('https://www.nytimes.com/section/world')
-# Import webdriver from selenium library
-from selenium import webdriver
+# import webdriver from selenium library
 # Importing keys in the program from webdriver
-from selenium.webdriver.common.keys import Keys
 # Providing the path of chrome Web driver
+from selenium.webdriver.common.keys import Keys
+from selenium import webdriver
+import time
 driver = webdriver.Chrome(
     '"C:/Users/callr/Downloads/chromedriver_win32/chromedriver.exe"')
 # Opening url by get() method
 i = 0
 while i < 5000:
-    # driver.get(
-    #     "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
+    #     driver.get(
+    #         "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
     # time.sleep(2)
     # driver.get(
     #     "https://neokingyt.blogspot.com/2022/12/recession-and-its-happening-in.html")
     # time.sleep(2)
-    # driver.get(
-    #     "https://neokingyt.blogspot.com/2022/12/inflation-and-its-effects-on-world.html")
-    # time.sleep(2)
-    # driver.get(
-    #     "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
-    # time.sleep(2)
+    driver.get(
+        "https://neokingyt.blogspot.com/2022/12/inflation-and-its-effects-on-world.html")
+    time.sleep(2)
+# driver.get(
+#     "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
+# time.sleep(2)
     driver.get(
         "https://neokingyt.blogspot.com/2022/12/video-games-and-how-it-simulates-your.html")
     time.sleep(2)
-    driver.get(
-        "https://neokingyt.blogspot.com/2022/12/10-steps-to-be-best-version-of-yourself.html")
-    time.sleep(12)
-    i += 1
+# driver.get(
+#     "https://neokingyt.blogspot.com/2022/12/10-steps-to-be-best-version-of-yourself.html")
+# time.sleep(2)
+i += 1
+# from plyer import notification
+# import time
+
+# while True:
+#     time.sleep(2)
+#     notification.notify(
+#         title='testing',
+#         message='message',
+#         timeout=2,
+#     )
