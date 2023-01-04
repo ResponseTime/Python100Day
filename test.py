@@ -81,7 +81,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 import time
 import requests
-# from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup
 
 
 # def scrape(url):
@@ -107,36 +107,36 @@ import requests
 # import webdriver from selenium library
 # Importing keys in the program from webdriver
 # Providing the path of chrome Web driver
-from selenium.webdriver.common.keys import Keys
-from selenium import webdriver
-import time
-driver = webdriver.Chrome(
-    '"C:/Users/callr/Downloads/chromedriver_win32/chromedriver.exe"')
-# Opening url by get() method
-i = 0
-while i < 5000:
-    driver.get(
-        "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
-    time.sleep(2)
-# driver.get(
-#     "https://neokingyt.blogspot.com/2022/12/recession-and-its-happening-in.html")
-# time.sleep(2)
-    driver.get(
-        "https://neokingyt.blogspot.com/2022/12/inflation-and-its-effects-on-world.html")
-    time.sleep(2)
-    driver.get(
-        "https://neokingyt.blogspot.com/2022/12/the-importance-of-lifelong-learning.html")
-    time.sleep(2)
-# driver.get(
-#     "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
-# time.sleep(2)
-    driver.get(
-        "https://neokingyt.blogspot.com/2022/12/video-games-and-how-it-simulates-your.html")
-    time.sleep(2)
-    driver.get(
-        "https://neokingyt.blogspot.com/2022/12/10-steps-to-be-best-version-of-yourself.html")
-    time.sleep(2)
-    i += 1
+# from selenium.webdriver.common.keys import Keys
+# from selenium import webdriver
+# import time
+# driver = webdriver.Chrome(
+#     '"C:/Users/callr/Downloads/chromedriver_win32/chromedriver.exe"')
+# # Opening url by get() method
+# i = 0
+# while i < 5000:
+#     driver.get(
+#         "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
+#     time.sleep(2)
+# # driver.get(
+# #     "https://neokingyt.blogspot.com/2022/12/recession-and-its-happening-in.html")
+# # time.sleep(2)
+#     driver.get(
+#         "https://neokingyt.blogspot.com/2022/12/inflation-and-its-effects-on-world.html")
+#     time.sleep(2)
+#     driver.get(
+#         "https://neokingyt.blogspot.com/2022/12/the-importance-of-lifelong-learning.html")
+#     time.sleep(2)
+# # driver.get(
+# #     "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
+# # time.sleep(2)
+#     driver.get(
+#         "https://neokingyt.blogspot.com/2022/12/video-games-and-how-it-simulates-your.html")
+#     time.sleep(2)
+#     driver.get(
+#         "https://neokingyt.blogspot.com/2022/12/10-steps-to-be-best-version-of-yourself.html")
+#     time.sleep(2)
+#     i += 1
 # from plyer import notification
 # import time
 
@@ -147,3 +147,16 @@ while i < 5000:
 #         message='message',
 #         timeout=2,
 #     )
+# import webdriver from selenium library
+# from selenium.webdriver.common.keys import Keys
+# from selenium import webdriver
+# import time
+# driver = webdriver.Chrome(
+#     '"C:/Users/callr/Downloads/chromedriver_win32/chromedriver.exe"')
+# driver.get("https://www.twitch.tv/kyedae")
+# time.sleep(5)
+# response = driver.page_source
+
+# soup = BeautifulSoup(response, 'html.parser')
+# ad = soup.find('span', {'class': 'seventv-text-fragment'}).text
+# print(ad)
