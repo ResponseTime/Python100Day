@@ -163,10 +163,11 @@
 # from bs4 import BeautifulSoup
 # import requests
 
-# d = requests.get('https://www.twitch.tv/directory/game/VALORANT')
+# d = requests.get('https://www.youtube.com/watch?v=PoeSTWEkcVY')
 
 # soup = BeautifulSoup(d.text, 'html.parser')
 
-# ps = soup.find_all('p', {'class': 'CoreText-sc-1txzju1-0 jiepBC'})
+# ps = [p.text for p in soup.find_all(
+#     'yt-formatted-string', {'id': 'content-text'})]
 
 # print(ps)
