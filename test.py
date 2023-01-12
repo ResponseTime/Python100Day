@@ -1,162 +1,172 @@
-# # import time as t
-# # import getpass
+# # # import time as t
+# # # import getpass
 
 
-# # class User():
-# #     Username = None
-# #     Password = None
+# # # class User():
+# # #     Username = None
+# # #     Password = None
 
-# #     def __init__(self):
-# #         file = open('details.txt', 'a')
-# #         file.close()
+# # #     def __init__(self):
+# # #         file = open('details.txt', 'a')
+# # #         file.close()
 
-# #     def signup(self):
-# #         val = input("Enter username ")
-# #         val2 = getpass.getpass()
-# #         self.Username = val
-# #         self.Password = val2
-# #         with open('details.txt', 'a') as detail:
-# #             detail.writelines(self.Username+":"+self.Password)
-# #             detail.write('\n')
+# # #     def signup(self):
+# # #         val = input("Enter username ")
+# # #         val2 = getpass.getpass()
+# # #         self.Username = val
+# # #         self.Password = val2
+# # #         with open('details.txt', 'a') as detail:
+# # #             detail.writelines(self.Username+":"+self.Password)
+# # #             detail.write('\n')
 
-# #     def login(self):
-# #         while True:
-# #             val = input("Enter username ")
-# #             val2 = getpass.getpass()
-# #             with open('details.txt', 'r') as details:
-# #                 data_obj = []
-# #                 for i in details.readlines():
-# #                     data_obj.append(i.rstrip('\n'))
-# #                 if f"{val}:{val2}" in data_obj:
-# #                     break
-# #                 else:
-# #                     print("Invalid username or password ")
-# #                     value = input("To sign up enter 0 ")
-# #                     if value == '0':
-# #                         self.signup()
+# # #     def login(self):
+# # #         while True:
+# # #             val = input("Enter username ")
+# # #             val2 = getpass.getpass()
+# # #             with open('details.txt', 'r') as details:
+# # #                 data_obj = []
+# # #                 for i in details.readlines():
+# # #                     data_obj.append(i.rstrip('\n'))
+# # #                 if f"{val}:{val2}" in data_obj:
+# # #                     break
+# # #                 else:
+# # #                     print("Invalid username or password ")
+# # #                     value = input("To sign up enter 0 ")
+# # #                     if value == '0':
+# # #                         self.signup()
 
 
-# # print("Enter exit() to exit the terminal")
-# # User = User()
-# # User.login()
+# # # print("Enter exit() to exit the terminal")
+# # # User = User()
+# # # User.login()
+# # # while True:
+# # #     val = input("$ ")
+# # #     if val == 'exit()':
+# # #         break
+# # #     t.sleep(0.2)
+# # import tkinter as tk
+
+# # class App:
+# #     def __init__(self, root):
+# #         # Create a label to display the input
+# #         self.label = tk.Label(root, text="")
+# #         self.label.pack()
+
+# #         # Create a text entry box for the user to input
+# #         self.entry = tk.Entry(root)
+# #         self.entry.pack()
+
+# #         # Create a button to submit the input
+# #         self.button = tk.Button(root, text="Submit", command=self.on_submit)
+# #         self.button.pack()
+
+# #     def on_submit(self):
+# #         # Get the input from the text entry box
+# #         input_text = self.entry.get()
+
+# #         # Set the label to display the input
+# #         self.label.config(text=input_text)
+
+# # # Create the root window
+# # root = tk.Tk()
+
+# # # Create an instance of the App class
+# # app = App(root)
+
+# # # Run the main loop
+# # root.mainloop()
+
+
+# from selenium.webdriver.common.keys import Keys
+# from selenium import webdriver
+# import time
+# import requests
+# from bs4 import BeautifulSoup
+
+
+# # def scrape(url):
+# #     # Make a GET request to the website
+# #     response = requests.get(url)
+
+# #     # Parse the HTML content
+# #     soup = BeautifulSoup(response.text, 'html.parser')
+
+# #     # Extract the information you want to scrape
+# #     # title = soup.find('h1').text
+# #     paragraphs = [p.text for p in soup.find_all('a')]
+# #     ps = [p.text for p in soup.find_all('p')]
+
+# #     # Print the information
+# #     # print(title)
+# #     print('\n'.join(paragraphs))
+# #     print('\n'.join(ps))
+
+
+# # # Test the scraper
+# # scrape('https://www.nytimes.com/section/world')
+# # import webdriver from selenium library
+# # Importing keys in the program from webdriver
+# # Providing the path of chrome Web driver
+# # from selenium.webdriver.common.keys import Keys
+# # from selenium import webdriver
+# # import time
+# # driver = webdriver.Chrome(
+# #     '"C:/Users/callr/Downloads/chromedriver_win32/chromedriver.exe"')
+# # # Opening url by get() method
+# # i = 0
+# # while i < 5000:
+# #     driver.get(
+# #         "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
+# #     time.sleep(2)
+# # # driver.get(
+# # #     "https://neokingyt.blogspot.com/2022/12/recession-and-its-happening-in.html")
+# # # time.sleep(2)
+# #     driver.get(
+# #         "https://neokingyt.blogspot.com/2022/12/inflation-and-its-effects-on-world.html")
+# #     time.sleep(2)
+# #     driver.get(
+# #         "https://neokingyt.blogspot.com/2022/12/the-importance-of-lifelong-learning.html")
+# #     time.sleep(2)
+# # # driver.get(
+# # #     "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
+# # # time.sleep(2)
+# #     driver.get(
+# #         "https://neokingyt.blogspot.com/2022/12/video-games-and-how-it-simulates-your.html")
+# #     time.sleep(2)
+# #     driver.get(
+# #         "https://neokingyt.blogspot.com/2022/12/10-steps-to-be-best-version-of-yourself.html")
+# #     time.sleep(2)
+# #     i += 1
+# # from plyer import notification
+# # import time
+
 # # while True:
-# #     val = input("$ ")
-# #     if val == 'exit()':
-# #         break
-# #     t.sleep(0.2)
-# import tkinter as tk
+# #     time.sleep(2)
+# #     notification.notify(
+# #         title='testing',
+# #         message='message',
+# #         timeout=2,
+# #     )
+# # import webdriver from selenium library
+# # from selenium.webdriver.common.keys import Keys
+# # from selenium import webdriver
+# # import time
+# # driver = webdriver.Chrome(
+# #     '"C:/Users/callr/Downloads/chromedriver_win32/chromedriver.exe"')
+# # driver.get("https://www.twitch.tv/kyedae")
+# # time.sleep(5)
+# # response = driver.page_source
 
-# class App:
-#     def __init__(self, root):
-#         # Create a label to display the input
-#         self.label = tk.Label(root, text="")
-#         self.label.pack()
+# # soup = BeautifulSoup(response, 'html.parser')
+# # ad = soup.find('span', {'class': 'seventv-text-fragment'}).text
+# # print(ad)
+# from bs4 import BeautifulSoup
+# import requests
 
-#         # Create a text entry box for the user to input
-#         self.entry = tk.Entry(root)
-#         self.entry.pack()
+# d = requests.get('https://www.twitch.tv/directory/game/VALORANT')
 
-#         # Create a button to submit the input
-#         self.button = tk.Button(root, text="Submit", command=self.on_submit)
-#         self.button.pack()
+# soup = BeautifulSoup(d.text, 'html.parser')
 
-#     def on_submit(self):
-#         # Get the input from the text entry box
-#         input_text = self.entry.get()
+# ps = soup.find_all('p', {'class': 'CoreText-sc-1txzju1-0 jiepBC'})
 
-#         # Set the label to display the input
-#         self.label.config(text=input_text)
-
-# # Create the root window
-# root = tk.Tk()
-
-# # Create an instance of the App class
-# app = App(root)
-
-# # Run the main loop
-# root.mainloop()
-
-
-from selenium.webdriver.common.keys import Keys
-from selenium import webdriver
-import time
-import requests
-from bs4 import BeautifulSoup
-
-
-# def scrape(url):
-#     # Make a GET request to the website
-#     response = requests.get(url)
-
-#     # Parse the HTML content
-#     soup = BeautifulSoup(response.text, 'html.parser')
-
-#     # Extract the information you want to scrape
-#     # title = soup.find('h1').text
-#     paragraphs = [p.text for p in soup.find_all('a')]
-#     ps = [p.text for p in soup.find_all('p')]
-
-#     # Print the information
-#     # print(title)
-#     print('\n'.join(paragraphs))
-#     print('\n'.join(ps))
-
-
-# # Test the scraper
-# scrape('https://www.nytimes.com/section/world')
-# import webdriver from selenium library
-# Importing keys in the program from webdriver
-# Providing the path of chrome Web driver
-# from selenium.webdriver.common.keys import Keys
-# from selenium import webdriver
-# import time
-# driver = webdriver.Chrome(
-#     '"C:/Users/callr/Downloads/chromedriver_win32/chromedriver.exe"')
-# # Opening url by get() method
-# i = 0
-# while i < 5000:
-#     driver.get(
-#         "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
-#     time.sleep(2)
-# # driver.get(
-# #     "https://neokingyt.blogspot.com/2022/12/recession-and-its-happening-in.html")
-# # time.sleep(2)
-#     driver.get(
-#         "https://neokingyt.blogspot.com/2022/12/inflation-and-its-effects-on-world.html")
-#     time.sleep(2)
-#     driver.get(
-#         "https://neokingyt.blogspot.com/2022/12/the-importance-of-lifelong-learning.html")
-#     time.sleep(2)
-# # driver.get(
-# #     "https://neokingyt.blogspot.com/2021/06/what-to-blog-about.html")
-# # time.sleep(2)
-#     driver.get(
-#         "https://neokingyt.blogspot.com/2022/12/video-games-and-how-it-simulates-your.html")
-#     time.sleep(2)
-#     driver.get(
-#         "https://neokingyt.blogspot.com/2022/12/10-steps-to-be-best-version-of-yourself.html")
-#     time.sleep(2)
-#     i += 1
-# from plyer import notification
-# import time
-
-# while True:
-#     time.sleep(2)
-#     notification.notify(
-#         title='testing',
-#         message='message',
-#         timeout=2,
-#     )
-# import webdriver from selenium library
-# from selenium.webdriver.common.keys import Keys
-# from selenium import webdriver
-# import time
-# driver = webdriver.Chrome(
-#     '"C:/Users/callr/Downloads/chromedriver_win32/chromedriver.exe"')
-# driver.get("https://www.twitch.tv/kyedae")
-# time.sleep(5)
-# response = driver.page_source
-
-# soup = BeautifulSoup(response, 'html.parser')
-# ad = soup.find('span', {'class': 'seventv-text-fragment'}).text
-# print(ad)
+# print(ps)
